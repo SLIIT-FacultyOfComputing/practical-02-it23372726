@@ -8,28 +8,28 @@ public class Part01{
 		parts = new String[3];
 
 		int i=0;
-		while(i<2){
+		while(i<2){             //loop for to enter two names
 			StringBuilder name = new StringBuilder();
 			System.out.printf("\n\nEnter your First Name: ");
-			name.append(kybrd.nextLine());
+			name.append(kybrd.nextLine());   // getting first name
 			System.out.printf("\nEnter your Middle Name: ");
-			name.append(" " + kybrd.nextLine());
+			name.append(" " + kybrd.nextLine());	// getting middle name
 			System.out.printf("\nEnter your Last Name: ");
-			name.append(" " + kybrd.nextLine());
+			name.append(" " + kybrd.nextLine());	// getting last name
 
-			fulname[i] = name.toString();
+			fulname[i] = name.toString(); // fullname teransfer to "fulname" array
 			int count = 0;
-			parts = fulname[i].split(" ");
+			parts = fulname[i].split(" ");	// spliting the full name to 3 parts and store in "parts" array
 			
 			
-			fulname[i] = fulname[i].toUpperCase();
-			for(char c : fulname[i].toCharArray()){
+			fulname[i] = fulname[i].toUpperCase();	// converting all letters to uppercase
+			for(char c : fulname[i].toCharArray()){	// for count vowels
                              	if(c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U'){
                                         count = count +1;
                                 }
                         }
-			fulname[i] = fulname[i].replace("A","@");
-			fulname[i] = fulname[i].replace("E","3");
+			fulname[i] = fulname[i].replace("A","@");	// replace A-> @
+			fulname[i] = fulname[i].replace("E","3");	// replace E-> 3
 			
 			System.out.println("\n\nName = " + fulname[i]);
                         System.out.println("\nFirst Name = " + parts[0]);
@@ -41,7 +41,7 @@ public class Part01{
 			i = i +1;
 
 		}
-		if(fulname[0].equals(fulname[1])){
+		if(fulname[0].equals(fulname[1])){	//check the names we entered are equal or not
 			System.out.println("Names are same!");
 		}
 		else{
@@ -50,7 +50,7 @@ public class Part01{
 
 		System.out.printf("\nEnter a data to Trim : ");
 		String Trim = kybrd.nextLine();
-		Trim =   Trim.trim();
+		Trim =   Trim.trim();				//Trim the entered string
                 System.out.println("Trimed Value : " + Trim);
 		
 	}
